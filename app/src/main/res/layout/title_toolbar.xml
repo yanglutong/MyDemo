@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/include_image"
+        android:layout_alignBottom="@+id/include_fan"
+        android:src="@drawable/a"
+        android:layout_width="30dp"
+        android:layout_marginBottom="2dp"
+        android:layout_height="15dp">
+    </ImageView>
+    <TextView
+        android:text="返回"
+        android:layout_alignBottom="@+id/include_title"
+        android:layout_toRightOf="@+id/include_image"
+        android:id="@+id/include_fan"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:text="购物车"
+        android:id="@+id/include_title"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:text="管理"
+        android:id="@+id/include_manager"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/include_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>

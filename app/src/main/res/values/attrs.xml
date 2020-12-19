@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyTitleBar">
+        <attr name="onClickYang" format="reference"></attr>
+        <attr name="titleText" format="string|reference"></attr>
+        <attr name="titleColor" format="color|reference"></attr>
+        <attr name="titleSize" format="dimension"></attr>
+        <attr name="titleDrawable" format="reference"></attr>
+        <attr name="textColor" format="reference"></attr>
+        <attr name="gravity" format="reference"></attr>
+        <attr name="guan" format="string"></attr>
+    </declare-styleable>
+</resources>
