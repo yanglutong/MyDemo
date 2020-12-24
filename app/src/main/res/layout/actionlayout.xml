@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#03A9F4"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/search_fan"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ImageView>
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/home_header_corner_bg"
+        android:layout_toRightOf="@+id/search_fan"
+        android:layout_toLeftOf="@id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/myImage"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <EditText
+            android:layout_toRightOf="@id/myImage"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:textColor="@android:color/white"
+            android:hint="搜索商品/品类"
+            android:padding="8dp"
+            android:textColorHint="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+    </RelativeLayout>
+    <TextView
+        android:text="搜索"
+        android:id="@+id/search"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>

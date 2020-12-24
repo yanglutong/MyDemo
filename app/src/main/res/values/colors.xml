@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorPrimary">#55A8DE</color>
+    <color name="colorPrimaryDark">#55A8DE</color>
+    <color name="colorAccent">#55A8DE</color>
+    <color name="colorbtnlogin">#55A8DE</color>
+    <color name="cal_divider">#FFEDEDED</color>
+    <color name="colorTheme">#55A8DE</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorblack">#000</color>
+    <color name="colorBlue">#60D5E9</color>
+    <color name="colorhui">#938778</color>
+    <color name="colorxiahua">#DCDCDC</color>
+    <color name="colorqianhui">#F5F5F5</color>
+    <color name="colorwhite">#fff</color>
+    <color name="colororgin">#F27022</color>
+    <color name="colororpin">#F0F5F7</color>
+    <color name="colororqianhui">#F4F4F4</color>
+    <color name="coloroRed">#EF3F32</color>
+    <color name="coloroHuiHUi">#BABABA</color>
+    <color name="coloroshenblue">#4C8FFE</color>
+    <color name="coloroqianhong">#FEE4DE</color>
+    <!--分割线-->
+    <color name="colorLine">#D3D3D3</color>
+    <!--分割线-->
+    <color name="colorLine1">#D3D3D3</color>
+    <!--灰色背景-->
+    <color name="colorBg">#F5F5F5</color>
+    <!--tab标签栏文字的颜色-->
+    <color name="colorTabText">#585858</color>
+    <!--页面背景的颜色-->
+    <color name="colorPageBg">#f2f4f5</color>
+
+    <color name="tab_blue_selected">#5aa5de</color>
+
+    <color name="txt_26">#1A1A1A</color>
+    <color name="txt_33">#333333</color>
+    <color name="txt_66">#666666</color>
+    <color name="txt_99">#999999</color>
+    <color name="txt_4d">#4D4D4D</color>
+    <color name="txt_7a">#7a7a7a</color>
+    <color name="txt_70">#707070</color>
+    <color name="txt_red">#FE4648</color>
+    <color name="txt_orange">#E86028</color>
+    <color name="txt_orange_eb5b27">#eb5b27</color>
+    <color name="btn_orange">#F16816</color>
+    <color name="txt_shouye">#353535</color>
+    <color name="txt_shouye_gray">#939393</color>
+    <color name="txt_44">#444444</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+    <color name="color_1B">#1B1B1B</color>
+    <color name="color_DC">#DCDCDC</color>
+
+    <color name="color_BDBDBD">#BDBDBD</color>
+    <color name="color_F4">#F4F4F4</color>
+
+    <color name="color_F0">#F0F0F0</color>
+
+    <color name="color_not_da">#FFE4E1</color>
+    <color name="color_not_da_bg">#FFFAFA</color>
+
+
+
+    <color name="colorTitle">#666</color>
+    <color name="color4556B7">#4556B7</color>
+    <color name="color_dati_blue">#1dacf9</color>
+    <color name="common_bg">#f5f5f5</color>
+    <color name="common_black">#000000</color>
+    <color name="common_blue">#03a9f4</color>
+    <color name="common_blue_dark">#0288d1</color>
+    <color name="common_blue_light">#039be5</color>
+    <color name="common_disable">#d9d9d9</color>
+    <color name="common_divider">#d4d4d4</color>
+    <color name="common_gray">#dddddd</color>
+    <color name="common_purple">#d500f9</color>
+    <color name="common_red">#f11919</color>
+    <color name="common_white">#ffffff</color>
+    <color name="common_yellow">#fe9c2f</color>
+
+    <color name="text_dark">#999999</color>
+    <color name="text_light_dark">#333333</color>
+    <color name="text_normal">#666666</color>
+    <color name="transparent">#00000000</color>
+
+    <!--Material Colors-->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="secondary_text_transparent_70">#B3727272</color>
+
+    <color name="divider">#B6B6B6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="chrome_grey">#F2F2F2</color>
+
+
+    <color name="red">#F44336</color>
+    <color name="pink">#FF4081</color>
+    <color name="purple">#9C27B0</color>
+    <color name="deepblue">#7C4DFF</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="blue">#448AFF</color>
+    <color name="lightblue">#03A9F4</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="teal">#009688</color>
+    <color name="green">#4CAF50</color>
+    <color name="lightgreen">#8BC34A</color>
+    <color name="lime">#CDDC39</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="amber">#FFC107</color>
+    <color name="orange">#FF9800</color>
+    <color name="deeporange">#FF5722</color>
+    <color name="brown">#795548</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="bluegrey">#607D8B</color>
+
+    <color name="trans_black_75">#BF000000</color>
+
+    <color name="trans_black_50">#80000000</color>
+
+    <color name="trans_black_25">#40000000</color>
+
+    <color name="green_theme">#017C67</color>
+    <color name="green_theme_dark">#00715C</color>
+    <color name="green_theme_pink">#AF3F3F</color>
+
+
 </resources>

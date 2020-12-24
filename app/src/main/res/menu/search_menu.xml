@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/re_layout" app:actionViewClass="androidx.appcompat.widget.SearchView" android:actionLayout="@layout/actionlayout" app:showAsAction="always"
+        tools:ignore="MenuTitle"></item>
+</menu>
