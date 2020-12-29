@@ -3,16 +3,28 @@
     package="com.example.mydemo">
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
+        android:name=".douyindemo.base.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".douyindemo.activity.Jiaozivideoplayer_MainActivity"></activity>
+        <activity android:name=".douyindemo.activity.ListActivity"></activity>
+        <activity android:name=".douyindemo.activity.Page2Activity"></activity>
+        <activity android:name=".douyindemo.activity.PageActivity"></activity>
+        <activity android:name=".douyindemo.activity.PrepareActivity"></activity>
+        <activity android:name=".douyindemo.activity.Record2Activity"></activity>
+        <activity android:name=".douyindemo.activity.RecordActivity"></activity>
+        <activity android:name=".douyindemo.activity.Record3Activity"></activity>
         <activity android:name=".zing.ScanActivity"></activity>
         <activity android:name=".SouSuoActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

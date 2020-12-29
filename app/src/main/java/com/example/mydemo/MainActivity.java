@@ -12,7 +12,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.mydemo.fragment.BannerFragment;
+import com.example.mydemo.fragment.DouYinFragment;
+import com.example.mydemo.fragment.HuaLangFragment;
 import com.example.mydemo.fragment.Load_Fragment;
+import com.example.mydemo.fragment.MarqueeViewFragment;
 import com.example.mydemo.fragment.SearchViewFragment;
 import com.example.mydemo.zing.ZingFragment;
 import com.example.mydemo.utils.MyViewPager;
@@ -22,8 +26,10 @@ import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
 
+
+
+public class MainActivity extends AppCompatActivity {
     private MyViewPager mVp;
     private TabLayout mTab;
     private ArrayList<Fragment> list;
@@ -40,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         initData();
         //加载数据
         initAdd();
-
     }
 
 
@@ -49,17 +54,40 @@ public class MainActivity extends AppCompatActivity {
         Load_Fragment fragment = new Load_Fragment();
         SearchViewFragment searchViewFragment = new SearchViewFragment();
         zingFragment = new ZingFragment();
+        DouYinFragment douYinFragment = new DouYinFragment();
+        HuaLangFragment huaLangFragment = new HuaLangFragment();
+        BannerFragment bannerFragment = new BannerFragment();
+        MarqueeViewFragment marqueeViewFragment = new MarqueeViewFragment();
 
         list.add(fragment);
         list.add(searchViewFragment);
         list.add(zingFragment);
-        strings.add("home");
-        strings.add("搜索框");
-        strings.add("二维码功能");
+        list.add(douYinFragment);
+        list.add(huaLangFragment);
+        list.add(bannerFragment);
+        list.add(marqueeViewFragment);
 
-        MyFragmentVp fragmentVp = new MyFragmentVp(getSupportFragmentManager(), list, strings);
+        this.strings.add("home");
+        this.strings.add("搜索框");
+        this.strings.add("二维码功能");
+        this.strings.add("抖音视频");
+        this.strings.add("画廊效果");
+        this.strings.add("Banner");
+        strings.add("跑马灯");
+
+
+        MyFragmentVp fragmentVp = new MyFragmentVp(getSupportFragmentManager(), list, this.strings);
         mVp.setAdapter(fragmentVp);
         mTab.setupWithViewPager(mVp);
+
+
+        for (int i = 0; i <list.size() ; i++) {
+            mTab.getTabAt(i).setIcon(R.drawable.tab_selector);
+        }
+
+
+        //设置tab的下划线隐藏
+        mTab.setSelectedTabIndicator(0);
     }
 
     private void initData() {
@@ -109,13 +137,12 @@ public class MainActivity extends AppCompatActivity {
             if(result.getContents() == null) {
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
             } else {
-
                 Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
                 zingFragment.setResult(result.getContents());
-//                text_result.setText(result.getContents());
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
+
 }

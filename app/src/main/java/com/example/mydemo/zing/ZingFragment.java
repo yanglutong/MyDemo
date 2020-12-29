@@ -137,7 +137,6 @@ public class ZingFragment extends Fragment implements View.OnClickListener {
 
     }
 
-
     public void setResult(String contents) {
         text_result.setText(contents);
     }
