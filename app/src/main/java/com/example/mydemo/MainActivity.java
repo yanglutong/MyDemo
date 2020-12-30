@@ -17,8 +17,10 @@ import com.example.mydemo.fragment.DouYinFragment;
 import com.example.mydemo.fragment.HuaLangFragment;
 import com.example.mydemo.fragment.Load_Fragment;
 import com.example.mydemo.fragment.MarqueeViewFragment;
+import com.example.mydemo.fragment.PopupWindowFragment;
 import com.example.mydemo.fragment.SearchViewFragment;
-import com.example.mydemo.zing.ZingFragment;
+import com.example.mydemo.fragment.ShoppingCartFragment;
+import com.example.mydemo.zxing.ZxingFragment;
 import com.example.mydemo.utils.MyViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTab;
     private ArrayList<Fragment> list;
     private ArrayList<String> strings;
-    private ZingFragment zingFragment;
+    private ZxingFragment zxingFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,19 +55,22 @@ public class MainActivity extends AppCompatActivity {
     private void initAdd() {
         Load_Fragment fragment = new Load_Fragment();
         SearchViewFragment searchViewFragment = new SearchViewFragment();
-        zingFragment = new ZingFragment();
+        zxingFragment = new ZxingFragment();
         DouYinFragment douYinFragment = new DouYinFragment();
         HuaLangFragment huaLangFragment = new HuaLangFragment();
         BannerFragment bannerFragment = new BannerFragment();
         MarqueeViewFragment marqueeViewFragment = new MarqueeViewFragment();
+        ShoppingCartFragment shoppingCartFragment = new ShoppingCartFragment();
 
         list.add(fragment);
         list.add(searchViewFragment);
-        list.add(zingFragment);
+        list.add(zxingFragment);
         list.add(douYinFragment);
         list.add(huaLangFragment);
         list.add(bannerFragment);
         list.add(marqueeViewFragment);
+        list.add(shoppingCartFragment);
+        list.add(new PopupWindowFragment());
 
         this.strings.add("home");
         this.strings.add("搜索框");
@@ -74,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         this.strings.add("画廊效果");
         this.strings.add("Banner");
         strings.add("跑马灯");
+        strings.add("购物车");
+        strings.add("pop");
 
 
         MyFragmentVp fragmentVp = new MyFragmentVp(getSupportFragmentManager(), list, this.strings);
@@ -138,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
-                zingFragment.setResult(result.getContents());
+                zxingFragment.setResult(result.getContents());
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);

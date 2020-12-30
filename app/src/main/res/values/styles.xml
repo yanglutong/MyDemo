@@ -14,4 +14,15 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.7</item>
     </style>
+
+    <!-- 购物车的-->
+    <style name="AddressCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style3</item>
+    </style>
+
+    <!-- Base application theme. PopupWindow的 -->
+    <style name="animTranslate">
+        <item name="android:windowEnterAnimation">@anim/translate_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_out</item>
+    </style>
 </resources>

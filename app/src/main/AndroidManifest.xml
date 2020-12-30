@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mydemo">
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".douyindemo.base.MyApp"
         android:allowBackup="true"
@@ -12,19 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".douyindemo.activity.Jiaozivideoplayer_MainActivity"></activity>
-        <activity android:name=".douyindemo.activity.ListActivity"></activity>
-        <activity android:name=".douyindemo.activity.Page2Activity"></activity>
-        <activity android:name=".douyindemo.activity.PageActivity"></activity>
-        <activity android:name=".douyindemo.activity.PrepareActivity"></activity>
-        <activity android:name=".douyindemo.activity.Record2Activity"></activity>
-        <activity android:name=".douyindemo.activity.RecordActivity"></activity>
-        <activity android:name=".douyindemo.activity.Record3Activity"></activity>
-        <activity android:name=".zing.ScanActivity"></activity>
+        <activity android:name=".activity.SaoMiaoActivity"></activity>
+        <activity android:name=".douyindemo.activity.Jiaozivideoplayer_MainActivity" />
+        <activity android:name=".douyindemo.activity.ListActivity" />
+        <activity android:name=".douyindemo.activity.Page2Activity" />
+        <activity android:name=".douyindemo.activity.PageActivity" />
+        <activity android:name=".douyindemo.activity.PrepareActivity" />
+        <activity android:name=".douyindemo.activity.Record2Activity" />
+        <activity android:name=".douyindemo.activity.RecordActivity" />
+        <activity android:name=".douyindemo.activity.Record3Activity" />
+        <activity android:name=".zxing.ScanActivity" />
         <activity android:name=".SouSuoActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

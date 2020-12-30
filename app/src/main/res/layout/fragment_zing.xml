@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".zing.ZingFragment">
+    tools:context=".zxing.ZxingFragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,4 +23,10 @@
         android:text="开始"
         android:id="@+id/button1"/>
 
+    <Button
+        android:id="@+id/btSao"
+        android:text="扫描"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 </LinearLayout>

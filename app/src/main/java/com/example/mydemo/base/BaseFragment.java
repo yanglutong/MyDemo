@@ -26,7 +26,6 @@ public abstract class BaseFragment extends Fragment {
         context=getContext();
         initView();
     }
-
     protected abstract int getLayoutId();
 
     protected abstract void initView();

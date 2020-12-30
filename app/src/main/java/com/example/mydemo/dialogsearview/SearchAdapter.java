@@ -14,7 +14,9 @@ import com.example.mydemo.R;
 import java.util.ArrayList;
 
 public class SearchAdapter extends BaseAdapter {
-
+    class ViewHolder{
+        TextView txtCountry;
+    }
     private Context mContext;
     private ArrayList<String> mCountries;
     private LayoutInflater mLayoutInflater;
@@ -89,9 +91,7 @@ public class SearchAdapter extends BaseAdapter {
 
 }
 
-class ViewHolder{
-     TextView txtCountry;
-}
+
 
 
 

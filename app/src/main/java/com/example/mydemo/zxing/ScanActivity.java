@@ -1,4 +1,4 @@
-package com.example.mydemo.zing;
+package com.example.mydemo.zxing;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
