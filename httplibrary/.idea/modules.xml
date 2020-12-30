@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-459096373/2007.iml" filepath="$PROJECT_DIR$/.idea/modules/-459096373/2007.iml" group="2007" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1146566877/app.iml" filepath="$PROJECT_DIR$/.idea/modules/1146566877/app.iml" group="2007/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/httplibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/httplibrary.iml" group="2007/httplibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1643221176/mvplibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/1643221176/mvplibrary.iml" group="2007/mvplibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1075345376/myapplication.iml" filepath="$PROJECT_DIR$/.idea/modules/1075345376/myapplication.iml" group="2007/myapplication" />
+    </modules>
+  </component>
+</project>
