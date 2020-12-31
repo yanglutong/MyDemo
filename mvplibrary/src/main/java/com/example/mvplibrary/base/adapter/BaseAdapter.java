@@ -27,16 +27,16 @@ public abstract class BaseAdapter<DATA> extends RecyclerView.Adapter<BaseViewHol
     protected LayoutInflater inflater;
 
     private int layoutId;
-    public BaseAdapter(List<DATA> datas, Context context ,int layoutId
+    public BaseAdapter(List<DATA> data, Context context ,int layoutId
     ) {
-        this.data = datas;
+        this.data = data;
         this.context = context;
         inflater=LayoutInflater.from(context);
         this.layoutId=layoutId;
     }
     //追加数据
-    public void setData(List<DATA>datas){
-        this.data=datas;
+    public void setData(List<DATA>data){
+        this.data=data;
         notifyDataSetChanged();
     }
     @NonNull
@@ -52,7 +52,9 @@ public abstract class BaseAdapter<DATA> extends RecyclerView.Adapter<BaseViewHol
             @Override
             public void onClick(View v) {
                 Log.i("杨路通", "onClick: ");
-                adapterOnItemClickListener.OnItemClick(position);
+                if(adapterOnItemClickListener!=null){
+                    adapterOnItemClickListener.OnItemClick(position);
+                }
             }
         });
     }

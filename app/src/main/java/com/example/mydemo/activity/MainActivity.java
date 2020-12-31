@@ -1,4 +1,4 @@
-package com.example.mydemo;
+package com.example.mydemo.activity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,9 +12,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.mydemo.R;
 import com.example.mydemo.fragment.BannerFragment;
 import com.example.mydemo.fragment.DouYinFragment;
 import com.example.mydemo.fragment.HuaLangFragment;
+import com.example.mydemo.fragment.LazyFragment;
 import com.example.mydemo.fragment.Load_Fragment;
 import com.example.mydemo.fragment.MarqueeViewFragment;
 import com.example.mydemo.fragment.PopupWindowFragment;
@@ -25,6 +27,8 @@ import com.example.mydemo.utils.MyViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.http.httplibrary.conifg.GlobalConfig;
+import com.http.httplibrary.utils.LogUtils;
 
 import java.util.ArrayList;
 
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        //开启log logUtils调试
+        LogUtils.openLog(true);
         //找到控件对象
         initView();
         //初始化数据源
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(marqueeViewFragment);
         list.add(shoppingCartFragment);
         list.add(new PopupWindowFragment());
+        list.add(new LazyFragment());
 
         this.strings.add("home");
         this.strings.add("搜索框");
@@ -81,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         strings.add("跑马灯");
         strings.add("购物车");
         strings.add("pop");
-
+        strings.add("Fragment 懒加载");
 
         MyFragmentVp fragmentVp = new MyFragmentVp(getSupportFragmentManager(), list, this.strings);
         mVp.setAdapter(fragmentVp);

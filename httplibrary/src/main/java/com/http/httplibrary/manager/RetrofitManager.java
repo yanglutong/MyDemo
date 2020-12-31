@@ -1,6 +1,5 @@
 package com.http.httplibrary.manager;
 
-import com.google.gson.Gson;
 import com.http.httplibrary.conifg.GlobalConfig;
 import com.http.httplibrary.constans.Constans;
 import com.http.httplibrary.https.DefaultTrustManager;
@@ -17,7 +16,6 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
-import javax.security.cert.CertificateException;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;

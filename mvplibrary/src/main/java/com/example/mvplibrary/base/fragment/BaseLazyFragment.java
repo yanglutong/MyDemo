@@ -1,17 +1,15 @@
 package com.example.mvplibrary.base.fragment;
 
 import android.os.Bundle;
-
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
 
 import com.example.mvplibrary.base.model.BaseModel;
 import com.example.mvplibrary.base.presenter.BasePresenterIml;
 import com.example.mvplibrary.base.view.BaseView;
 
-import androidx.annotation.Nullable;
-import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
@@ -22,10 +20,15 @@ import butterknife.Unbinder;
  * 创建时间：2020/11/9  10:35
  * 描述：TODO
  */
-public abstract class BaseLazyFragment<V extends BaseView,M extends BaseModel,P extends BasePresenterIml<V,M>> extends BaseFragment implements BaseView{
-    boolean mIsPrepare = false;        //初始化视图
-    boolean mIsVisible = false;        //不可见
-    boolean mIsFirstLoad = true;    //第一次加载
+public  abstract class BaseLazyFragment<V extends BaseView,M extends BaseModel,P extends BasePresenterIml<V,M>> extends BaseFragment implements BaseView{
+    /*标志位 判断数据是否初始化*/
+    private boolean isInitData = false;
+
+    /*标志位 判断fragment是否可见*/
+    private boolean isVisibleToUser = false;
+
+    /*标志位 判断view已经加载完成 避免空指针操作*/
+    private boolean isPrepareView = false;
     private Unbinder unbinder;
     public P mPresenter;
     @Nullable
@@ -36,34 +39,42 @@ public abstract class BaseLazyFragment<V extends BaseView,M extends BaseModel,P 
         mPresenter=createPresenter();
         if(mPresenter!=null){
             mPresenter.bindView((V) this);
+
+            //判断view已经加载完成 P层对象已经持有
+            isPrepareView=true;
         }
-        initLazyMvpData();
+
+        initDataAndEvent();
     }
+
+
+    //初始化数据
+    protected abstract void initDataAndEvent();
+
+
+    /*加载数据的方法,由子类实现*/
+    protected abstract void initLazyData();
 
     protected abstract P createPresenter();
 
+    /*当fragment由可见变为不可见和不可见变为可见时回调*/
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser){
-            mIsVisible=true;
-        }else{
-            mIsVisible=false;
-        }
-        initLazyMvpData();
+        this.isVisibleToUser = isVisibleToUser;
+        lazyInitData();
     }
 
-
-    public void initLazyMvpData(){
-        if(mIsPrepare&&mIsVisible&&mIsFirstLoad){
-            if(mPresenter!=null){
-                lazyData();
-            }
-            mIsFirstLoad=false;
+    /*懒加载方法*/
+    private void lazyInitData() {
+        //当前fragment显示在界面上并且view已经绘制完成
+        //没有加载过资源就进行网络请求或数据库操作
+        if (!isInitData && isVisibleToUser && isPrepareView) {
+            isInitData = true;
+            //使用此方法进行懒加载
+            initLazyData();
         }
     }
-    //子类加载数据
-    public abstract void lazyData();
+
 
     @Override
     public void onDestroyView() {
@@ -74,5 +85,24 @@ public abstract class BaseLazyFragment<V extends BaseView,M extends BaseModel,P 
         if(mPresenter!=null){
             mPresenter.onUnBindView();
         }
+    }
+    /*fragment生命周期中onViewCreated之后的方法 在这里调用一次懒加载 避免第一次可见不加载数据*/
+    public void onActivityCreated( Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        lazyInitData();
+    }
+    @Override
+    public void showLoadingView() {
+
+    }
+
+    @Override
+    public void showSuccessView() {
+
+    }
+
+    @Override
+    public void showErrorView() {
+
     }
 }

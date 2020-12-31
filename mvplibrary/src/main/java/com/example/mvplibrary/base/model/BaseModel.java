@@ -10,4 +10,5 @@ package com.example.mvplibrary.base.model;
  * 描述：TODO
  */
 public class BaseModel {
+
 }

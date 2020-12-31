@@ -24,13 +24,13 @@ public class JsonUtils {
      * @param <T>
      * @return 返回一个实体类的集合类型
      */
-    public static <T> List<T> jsonToClassList(JsonElement data, Class<T> tClass) {
+    public static <T> ArrayList<T> jsonToClassList(JsonElement data, Class<T> tClass) {
         Gson gson = new Gson();
         JsonArray jsonArray = null;
         if (data.isJsonArray()) {
             jsonArray = data.getAsJsonArray();
         }
-        List<T> lists = new ArrayList<>();
+        ArrayList<T> lists = new ArrayList<>();
         T t = null;
         Iterator it = jsonArray.iterator();
         //遍历json数组

@@ -57,7 +57,6 @@ public abstract class BaseLazyFragment extends Fragment {
             initData();
         }
     }
-
     /*fragment生命周期中onViewCreated之后的方法 在这里调用一次懒加载 避免第一次可见不加载数据*/
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

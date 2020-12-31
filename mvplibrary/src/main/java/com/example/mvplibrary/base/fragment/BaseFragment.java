@@ -49,15 +49,11 @@ public abstract class BaseFragment extends RxFragment{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
-        initDataAndEvent();
     }
 
-    //初始化数据
-    private void initDataAndEvent() {
 
-    }
 
-    protected abstract int creatLayoutId();
+    protected abstract int createLayoutId();
 
     @Override
     public void onDestroyView() {

@@ -29,11 +29,11 @@ public abstract class BaseMvpFragment<V extends BaseView,M extends BaseModel,P e
         if(mPresenter!=null){
             mPresenter.bindView((V) this);
         }
-        initDataMvp();
+        initDataMvp(view);
     }
 
     //初始化Mvp数据方法
-    protected abstract void initDataMvp();
+    protected abstract void initDataMvp(View view);
 
     protected abstract P createPresenter();
 

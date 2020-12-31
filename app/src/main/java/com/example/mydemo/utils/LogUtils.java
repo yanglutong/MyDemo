@@ -1,4 +1,4 @@
-package com.http.httplibrary.utils;
+package com.example.mydemo.utils;
 
 import android.util.Log;
 
