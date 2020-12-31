@@ -22,6 +22,7 @@ import com.example.mydemo.fragment.MarqueeViewFragment;
 import com.example.mydemo.fragment.PopupWindowFragment;
 import com.example.mydemo.fragment.SearchViewFragment;
 import com.example.mydemo.fragment.ShoppingCartFragment;
+import com.example.mydemo.fragment.SkuFragment;
 import com.example.mydemo.zxing.ZxingFragment;
 import com.example.mydemo.utils.MyViewPager;
 import com.google.android.material.tabs.TabLayout;
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void fragmentAdd(Fragment fragment,String title){
+        list.add(fragment);
+        strings.add(title);
+    }
 
     private void initAdd() {
         Load_Fragment fragment = new Load_Fragment();
@@ -68,27 +73,18 @@ public class MainActivity extends AppCompatActivity {
         MarqueeViewFragment marqueeViewFragment = new MarqueeViewFragment();
         ShoppingCartFragment shoppingCartFragment = new ShoppingCartFragment();
 
-        list.add(fragment);
-        list.add(searchViewFragment);
-        list.add(zxingFragment);
-        list.add(douYinFragment);
-        list.add(huaLangFragment);
-        list.add(bannerFragment);
-        list.add(marqueeViewFragment);
-        list.add(shoppingCartFragment);
-        list.add(new PopupWindowFragment());
-        list.add(new LazyFragment());
+        fragmentAdd(fragment, "home");
+        fragmentAdd(searchViewFragment, "搜索框");
+        fragmentAdd(zxingFragment, "二维码功能");
+        fragmentAdd(douYinFragment, "抖音视频");
+        fragmentAdd(huaLangFragment, "画廊效果");
+        fragmentAdd(bannerFragment, "Banner");
+        fragmentAdd(marqueeViewFragment, "跑马灯");
+        fragmentAdd(shoppingCartFragment, "购物车");
+        fragmentAdd(new PopupWindowFragment(), "pop");
+        fragmentAdd(new LazyFragment(), "Fragment 懒加载");
+        fragmentAdd(new SkuFragment(), "Sku购物选项");
 
-        this.strings.add("home");
-        this.strings.add("搜索框");
-        this.strings.add("二维码功能");
-        this.strings.add("抖音视频");
-        this.strings.add("画廊效果");
-        this.strings.add("Banner");
-        strings.add("跑马灯");
-        strings.add("购物车");
-        strings.add("pop");
-        strings.add("Fragment 懒加载");
 
         MyFragmentVp fragmentVp = new MyFragmentVp(getSupportFragmentManager(), list, this.strings);
         mVp.setAdapter(fragmentVp);
